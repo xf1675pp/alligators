@@ -384,7 +384,22 @@ public class MovieDriver {
 		return true;
 	}
 	public static void main(String[] args) {
-		processMovieSongs();
-		processMoviePeopleSong();
+		int selection;
+                Scanner in = new Scanner(System.in);
+                selection = in.nextInt();
+                
+                System.out.println("Enter your choice");
+                System.out.println("1. MS TEST DATA AND MOVIE TABLE");
+                System.out.println("2. MPR_TEST_DATA AND PEOPLE Table");
+                
+                switch (selection) {
+        case 1:
+             processMovieSongs();
+            break;
+        case 2:
+            processMoviePeopleSong();
+            break;
+        default:
+            System.out.println("Enter a valid Choice");
 	}
 }
